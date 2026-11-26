@@ -1,0 +1,5 @@
+services:
+  java-app:
+    build: .
+    image: maven-java-app:v1
+    container_name: maven-java-compose
