@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: maven-java-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: maven-java-container
+          image: maven-java-app:v1
+          imagePullPolicy: Never
+      restartPolicy: Never
+  backoffLimit: 2
