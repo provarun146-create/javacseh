@@ -9,4 +9,4 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=build /app/target/javamaven1-0.0.1-SNAPSHOT.jar app.jar
-CMD ["java", "-cp", "app.jar", "com.example1.App"]
+CMD ["java", "-cp", "app.jar", "com.example1.javamaven1.App"]
